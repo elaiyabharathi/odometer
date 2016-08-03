@@ -7,19 +7,14 @@ class Test{
 	public static void main (String[] args) throws java.lang.Exception
 	{
 
-		int number = 4567;
-		int order = 4;
-		int next = Odometer.getnNext(number,order,5);
-		int prev = Odometer.getnPrev(next,order,5);
-		int diff = Odometer.difference(next,prev,order);
-		System.out.println("number :"+number+" next :"+next+" prev:"+prev+" diff:"+diff);
-		
-		number = 23456789;
-		order = 8;
-		next = Odometer.getnNext(number,order,5);
-		prev = Odometer.getnPrev(next,order,5);
-		diff = Odometer.difference(next,prev,order);
-		System.out.println("number :"+number+" next :"+next+" prev:"+prev+" diff:"+diff);
+		int number = 24567;
+		int order = 5;
+		int next = odometer.getnNext(number,50,order);
+		System.out.println("next: "+next);
+		int prev = odometer.getnPrevious(number,5,order);
+		System.out.println("previous: "+prev);
+		int diff = odometer.difference(12345,23456,5);
+		System.out.println("diff: "+diff);
 		
 	}	
 }

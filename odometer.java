@@ -3,7 +3,7 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-class CodeChef{
+class odometer{
 public static void main(String[] args)
 {
     System.out.println("DONE");
@@ -60,7 +60,7 @@ public static void main(String[] args)
 			a=n%10;
 			n=n/10;
 			b=n%10;
-			if(b>a)
+			if((b>a)||(b==a))
 				{
 					return false;
 				}

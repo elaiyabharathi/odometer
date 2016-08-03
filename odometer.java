@@ -23,7 +23,7 @@ class Odometer{
 	    temp++;
 	    while(!isAscending(temp))
 	    {
-	        temp = getNext(temp);
+	        temp = getNext(temp,order);
 	    }
 	    return temp;
 	}
@@ -44,7 +44,7 @@ class Odometer{
 	    temp--;
 	    while(!isAscending(temp))
 	    {
-	        temp = getPrevious(temp);
+	        temp = getPrevious(temp,order);
 	    }
 	    return temp;
 	}

@@ -3,8 +3,11 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-class Odometer{
-
+class CodeChef{
+public static void main(String[] args)
+{
+    System.out.println("DONE");
+}
 	
 	public static int getnNext(int number,int diff,int order)
 	{
@@ -21,7 +24,7 @@ class Odometer{
 	    int temp = number;
 	    if(temp == getMax(order))return getMin(order);
 	    temp++;
-	    while(!isAscending(temp))
+	    while(!isAscending(temp,order))
 	    {
 	        temp = getNext(temp,order);
 	    }
@@ -42,7 +45,7 @@ class Odometer{
 	    int temp = number;
 	    if(temp == getMin(order))return getMax(order);
 	    temp--;
-	    while(!isAscending(temp))
+	    while(!isAscending(temp,order))
 	    {
 	        temp = getPrevious(temp,order);
 	    }
@@ -65,9 +68,9 @@ class Odometer{
 		 return true;  
 	}
 	
-	public static int difference(int a, int b)
+	public static int difference(int a, int b,int order)
 	{
-		int smaller,higher,diff;
+		int smaller=0,higher=0,diff=0;
 		if(a<b)
 		{
 			smaller=a;
@@ -85,7 +88,7 @@ class Odometer{
 		}
 		while((smaller)!=higher)
 		{
-			smaller=getnNext(smaller);
+			smaller=getNext(smaller,order);
 			diff++;
 		}
 		return diff;
